@@ -2,19 +2,19 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle2, Sparkles } from "lucide-react"
 
 const values = [
-  { title: "Качество", description: "Высококлассные решения, соответствующие самым высоким стандартам" },
-  { title: "Доступность", description: "Профессиональные сайты по честным и прозрачным ценам" },
-  { title: "Прозрачность", description: "Четкая коммуникация без скрытых платежей" },
-  { title: "Клиентоориентированность", description: "Ваши цели и пожелания всегда в приоритете" },
-  { title: "Масштабируемость", description: "Сайты, которые растут вместе с вашим бизнесом" },
-  { title: "Гибкость", description: "Быстрая адаптация под меняющиеся потребности" },
+  { title: "Качество печати", description: "Используем профессиональное оборудование и сертифицированные материалы" },
+  { title: "Честные цены", description: "Прозрачное ценообразование без скрытых платежей и доплат" },
+  { title: "Быстрые сроки", description: "Срочное изготовление от 1 дня — не подведём в важный момент" },
+  { title: "Индивидуальный подход", description: "Учитываем каждую деталь, чтобы результат превзошёл ожидания" },
+  { title: "Полный цикл", description: "От разработки дизайна до готового изделия — всё в одном месте" },
+  { title: "Поддержка клиентов", description: "Всегда на связи: поможем с выбором материала, формата и дизайна" },
 ]
 
 const stats = [
-  { number: "50+", label: "Проектов" },
-  { number: "45+", label: "Довольных клиентов" },
-  { number: "30+", label: "Созданных логотипов" },
-  { number: "3+", label: "Года опыта" },
+  { number: "1000+", label: "Выполненных заказов" },
+  { number: "500+", label: "Довольных клиентов" },
+  { number: "50+", label: "Видов продукции" },
+  { number: "5+", label: "Лет на рынке" },
 ]
 
 export function AboutSection() {
@@ -27,19 +27,19 @@ export function AboutSection() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold">
             <Sparkles className="h-4 w-4" />
-            О CodeCraft
+            О PrintArt
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">
             Качество, которое{" "}
             <span className="text-primary relative">
-              впечатляет
+              видно
               <svg className="absolute -bottom-2 left-0 w-full" height="8" viewBox="0 0 200 8" fill="none">
                 <path d="M0 4C50 2 150 6 200 4" stroke="currentColor" strokeWidth="2" className="text-primary" />
               </svg>
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
-            Создание сайта не должно быть дорогим. Мы разрабатываем индивидуальные решения, которые идеально соответствуют пожеланиям каждого клиента.
+            Мы — магазин фото-печати и дизайна с пятилетним опытом. Помогаем частным клиентам и бизнесу воплощать идеи в красивые, качественные изделия.
           </p>
         </div>
 

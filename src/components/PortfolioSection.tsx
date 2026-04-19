@@ -1,43 +1,37 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { ExternalLink } from "lucide-react"
-import { Button } from "@/components/ui/button"
 
 const projects = [
   {
-    title: "Умный помощник по выборам",
-    category: "AI/ML и веб-разработка",
-    image: "/omgekeerdestemwijzer-banner.png",
+    title: "Свадебная фотокнига",
+    category: "Фотокниги",
+    image: "https://cdn.poehali.dev/projects/90066bcf-75ac-40b9-9e90-c7a65977cad6/files/a2c89536-9b5c-48e5-9f2a-1dee55752b7e.jpg",
     description:
-      "AI-приложение для выборов. Пользователи задают вопросы о позициях партий и получают 100% фактические ответы из официальных программ с использованием RAG-технологии.",
-    url: "https://de-omgekeerde-stemwijzer.onrender.com/",
-    tags: ["Next.js", "AI/ML", "RAG", "TypeScript"],
+      "Роскошная фотокнига формата А4 на 60 разворотов с матовой ламинацией. Нежный дизайн, тонкая обработка каждого снимка — вечный подарок молодой паре.",
+    tags: ["Фотокнига", "Свадьба", "А4", "Матовая ламинация"],
   },
   {
-    title: "Автомойка Tahsin",
-    category: "Веб-дизайн и разработка",
-    image: "/autopoetsbedrijf-tahsin-project.png",
+    title: "Рекламный баннер для кафе",
+    category: "Широкоформатная печать",
+    image: "https://cdn.poehali.dev/projects/90066bcf-75ac-40b9-9e90-c7a65977cad6/files/c603fa33-3eb1-4a5c-bc91-c999c76fda7c.jpg",
     description:
-      "Профессиональный сайт для автомойки с 20-летним опытом. Полная презентация услуг, автомойки и гаража с современным адаптивным дизайном.",
-    url: "https://www.autopoetsbedrijftahsin.nl/",
-    tags: ["React", "Next.js", "Tailwind CSS"],
+      "Яркий уличный баннер 3×1.5 м для летней веранды кафе. Разработали дизайн с нуля, подобрали влагостойкий материал для уличного размещения.",
+    tags: ["Баннер", "Уличная печать", "Дизайн", "3×1.5 м"],
   },
   {
-    title: "Кадровое агентство CAN",
-    category: "Веб-разработка",
-    image: "/can-uitzendbureau-project.png",
+    title: "Фирменный стиль пекарни",
+    category: "Графический дизайн",
+    image: "https://cdn.poehali.dev/projects/90066bcf-75ac-40b9-9e90-c7a65977cad6/files/4ab63e06-1715-4595-8b4c-f6d1933c06cd.jpg",
     description:
-      "Кадровое агентство с 30-летним опытом в садоводческом секторе. Сайт с обзором услуг и прямыми контактами для работодателей и соискателей.",
-    url: "https://canbv.nl/",
-    tags: ["Next.js", "React", "Tailwind CSS"],
+      "Полный фирменный стиль: логотип, визитки, упаковка, меню и вывеска. Тёплая, уютная стилистика, которая сразу создаёт нужное настроение у посетителей.",
+    tags: ["Логотип", "Фирстиль", "Визитки", "Упаковка"],
   },
   {
-    title: "Портфолио Murat Sahin",
-    category: "Портфолио-сайт",
-    image: "/murat-sahin-portfolio.png",
+    title: "Корпоративные подарочные наборы",
+    category: "Сувенирная продукция",
+    image: "https://cdn.poehali.dev/projects/90066bcf-75ac-40b9-9e90-c7a65977cad6/files/6731d0c6-f3eb-4b6e-abe6-355e22ba5a43.jpg",
     description:
-      "Профессиональное портфолио full-stack разработчика. Демонстрация проектов, навыков и опыта с современным минималистичным дизайном и темной темой.",
-    url: "https://murat-sahin-dev.vercel.app/",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", ".NET Core"],
+      "Серия корпоративных подарков к Новому году: кружки, ежедневники и магниты с брендингом компании. Тираж 200 штук, всё готово за 5 дней.",
+    tags: ["Сувениры", "Корпоратив", "Кружки", "Брендинг"],
   },
 ]
 
@@ -46,9 +40,9 @@ export function PortfolioSection() {
     <section id="portfolio" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">Наше портфолио</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">Наши работы</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
-            Ознакомьтесь с подборкой наших последних проектов и узнайте, как мы помогаем бизнесу расти с помощью мощных цифровых решений.
+            Посмотрите примеры наших проектов — фотокниги, баннеры, дизайн и сувениры для клиентов из разных сфер.
           </p>
         </div>
 
@@ -58,22 +52,13 @@ export function PortfolioSection() {
               key={index}
               className="group overflow-hidden border-none shadow-md hover:shadow-xl transition-all duration-300"
             >
-              <div className="relative overflow-hidden aspect-video">
+              <div className="relative overflow-hidden aspect-video bg-muted">
                 <img
-                  src={project.image || "/placeholder.svg"}
+                  src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <Button
-                    size="sm"
-                    variant="secondary"
-                    className="gap-2"
-                    onClick={() => window.open(project.url, "_blank")}
-                  >
-                    Открыть проект <ExternalLink className="h-4 w-4" />
-                  </Button>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/20 to-transparent" />
               </div>
               <CardContent className="p-6">
                 <p className="text-sm text-primary font-semibold mb-2">{project.category}</p>
